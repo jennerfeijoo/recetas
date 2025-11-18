@@ -1,0 +1,209 @@
+5 formaggi
+  queso mozzarella
+  queso de cabara
+   queso gorgonzola (dh)
+  almendras laminadas (dh)
+  parmesano lascas (dh)
+
+la nostra margherita
+  Salsa tomate pulpa
+  mozarella
+  mozzaerlla di bufalo (dh)
+  albahaca fresca (dh)
+  aceite de oliva (dh)
+
+prosciutto
+  Salsa tomate pulpa
+  mozarella pizza
+  jamon york tiras
+  oregano fresco (dh)
+
+piemontese
+  Salsa tomate pulpa
+  mozzaerlla pizza
+  cebolla caramelizada
+  olie taggiasca
+  panceta
+  orégano fresco (dh)
+
+Pepperoni
+  Salsa tomate pulpa
+  queso mozzarella pizza
+  salami peperoni 
+
+prosciutto e funghi
+  Salsa tomate pulpa
+  mozarella pizza
+  jamon york tiras
+  champiñon laminado
+  oregano fresco (dh)
+  pimienta negra (dh)
+
+berenjena y queso de cabra
+  Salsa de tomate pulpa
+  Mozarella pizza 
+  queso de cabra
+  berenjena
+  cebolla caramelizada
+
+Panceta e funghi
+  Salsa de tomate pulpa
+  Mozarella pizza
+  panceta
+  champiñones
+  orégano (dh)
+
+pepperoni e bolognese
+  salsa boloñesa
+  mozarella piiza
+  peperoni
+  oregano (dh)
+
+jamonn york y ricotta
+  salsa de tomate pulpa
+  mozarella pizza
+  jamon york tiras
+  ricotta  (dh)
+  albahaca (dh)
+
+Berenjean y queso de cabra
+  salsa de tomate piiza
+  mozarrella pizza
+  berenjena
+  cebolla caremelizada
+  queso cabra
+
+
+
+ Diavola NAPOLETANA
+  Salsa de tomate pulpa
+  hojilla picante
+  mozarella pizza
+  pollo marinado tiras
+  pepperono
+  carne picada
+  champiñon laminado
+  hojilla picahte (dh)
+  parmigiano regginao rallado (dh)
+
+  
+Vulcano bolognese P
+  salsa tomate y bolognesa
+  Salsa de tomate pulpa
+  sacrmoza afumicatta ralada
+  panceta tess affumicata
+  pepperoni
+  salchica toscana
+  albahaca fresca (dh)
+
+Vulano formaggi
+  Masa napolitaa
+  crema de parmesano
+  mozarrella pizza
+  salsa de tomate pizza
+  panceeta cebolltas al mádena
+  orégano (dh)
+
+Pizza mortadella tartufata P
+  salsa de tomate pulpa
+  qeso mozzarella pizza
+  mortadela trufada
+  mozzarela búfala
+  salsa presto
+  polvo de pistacho
+  salsa trufa
+  
+Pizza Carbonara Tartufata
+  prep/salsa blanca tartufata
+  queso mozzarella pizza
+  cebolla roja juliana
+  champiñón laminado
+  huevo a baja temperatura
+  panceta
+  pimienta negra grano (dh)
+  parmesano cuña (dh)
+  
+Pizza Vitella e Pancetta
+ salsa tomate pulpa
+ queso mozzarella pizza
+ carne especiada pizza
+ panceta
+ prep. tomate rosa (dados 2×2 cm) (dh)
+ ajetes en juliana (dh)
+ oliva taggiasca (dh)
+ albahaca fresca (dh)
+
+Pizza Verdure e Formaggio di Capra
+ salsa tomate pulpa
+ mozzarella pizzadona
+ prep. calabacín rodajas asado en broiler
+ g/prep. berenjena en rodajas asado en broiler
+ g/prep. pimiento rojo asado en broiler
+ prep. tomate semiseco escurrido (dh)
+ g/prep. queso de cabra en cuartos (dh)
+ albahaca entera  fresca (dh)
+ salsa pesto (dh)
+
+Pizza Pollo Barbecue
+ salsa barbacoa
+ queso mozzarella pizza
+ queso scamorza
+ prep. cebolla roja juliana
+ prep. pollo marinado (tiras)
+ salsa barbacoa
+ orégano fresco (dh)
+
+Serrana
+  salsa tomate pulpa
+  mozzarella
+  pimiento rojo asado
+  pimiento verde asado
+  romero
+  paletilla de cebo ibérica (dh)
+  aceite de oliva (dh)
+
+Filippo
+  salsa tomate pulpa
+  mozzarella
+  hojilla picante
+  cebolla morada juliana
+  salame finocchiona
+  peperoncino rosso (dh)
+  perejil (dh)
+  miel (dh)
+
+Gricia
+  salsa blanca
+  mozzarella
+  pancetta
+  cebolla caramelizada
+  lascas de queso manchego (dh)
+  perejil picado (dh)
+  pimienta negra (dh)
+
+Chorizo e Uovo
+  salsa tomate pulpa
+  mozzarella
+  chorizo
+  huevo a baja temperatura (dh)
+  perejil (dh)
+
+Gorgonzola e Pera
+  salsa blanca
+  mozzarella
+  pera
+  gorgonzola
+  miel trufada (dh)
+  cacahuete garrapiñado (dh)
+
+Pizza Queso Cabra y Berenjena
+  berenjena asada
+  mozzarella
+  queso de cabra
+  cebolla caramelizada
+  miel (dh)
+
+
+
+  
+ 
