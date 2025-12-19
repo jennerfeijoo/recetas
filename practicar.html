@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practicar recetas</title>
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a href="index.html" style="display:inline-block;margin:16px 12px;">← Volver al menú</a>
+
+  <header style="margin:0 12px 12px;">
+    <h1 style="margin:0;">Practicar recetas</h1>
+    <p style="margin:8px 0 0; opacity:0.85;">
+      Selecciona los ingredientes correctos para cada receta. Puedes arrastrar y soltar o usar clic (modo móvil).
+    </p>
+  </header>
+
+  <!-- Panel de control -->
+  <section style="margin:12px; display:grid; gap:10px; max-width:1100px;">
+    <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+      <label>
+        Modo:
+        <select id="modeSelect">
+          <option value="learn" selected>Aprender (con feedback)</option>
+          <option value="exam">Examen (más estricto)</option>
+        </select>
+      </label>
+
+      <label>
+        Recetas:
+        <select id="scopeSelect">
+          <option value="all" selected>Todo (Pizzas + Calzones)</option>
+          <option value="pizzas">Solo pizzas</option>
+          <option value="calzones">Solo calzones</option>
+        </select>
+      </label>
+
+      <label>
+        Banco:
+        <select id="bankSizeSelect">
+          <option value="mixed" selected>Mezclado (recomendado)</option>
+          <option value="all">Todos los ingredientes</option>
+        </select>
+      </label>
+
+      <button id="startBtn" type="button">Empezar</button>
+      <button id="shuffleBtn" type="button">Barajar</button>
+      <button id="resetBtn" type="button">Reiniciar</button>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:14px; align-items:center; opacity:0.9;">
+      <div><strong>Progreso:</strong> <span id="progressText">0/0</span></div>
+      <div><strong>Puntuación:</strong> <span id="scoreText">0</span></div>
+      <div><strong>Racha:</strong> <span id="streakText">0</span></div>
+      <div id="timerWrap" style="display:none;"><strong>Tiempo:</strong> <span id="timerText">00:00</span></div>
+    </div>
+  </section>
+
+  <!-- Receta actual -->
+  <section style="margin:12px; max-width:1100px;">
+    <div style="display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+      <h2 id="recipeTitle" style="margin:0;">Pulsa “Empezar”</h2>
+      <small id="recipeTag" style="opacity:0.75;"></small>
+    </div>
+
+    <div id="recipeHint" style="margin-top:8px; opacity:0.85; display:none;">
+      Consejo: céntrate en los ingredientes diferenciales (salsas especiales, embutidos, quesos, huevo).
+    </div>
+  </section>
+
+  <!-- Área de juego -->
+  <section style="margin:12px; max-width:1100px; display:grid; grid-template-columns: 1fr 1fr; gap:14px;">
+    <!-- Banco de ingredientes -->
+    <div style="border:1px solid rgba(0,0,0,0.15); border-radius:12px; padding:12px;">
+      <h3 style="margin:0 0 10px;">Banco de ingredientes</h3>
+      <p style="margin:0 0 10px; opacity:0.8;">
+        Arrastra al panel de la derecha o haz clic para añadir/quitar.
+      </p>
+
+      <div id="ingredientBank"
+           style="min-height:140px; display:flex; flex-wrap:wrap; gap:8px;"
+           aria-label="Banco de ingredientes">
+        <!-- JS inyecta aquí chips arrastrables -->
+      </div>
+    </div>
+
+    <!-- Selección del usuario -->
+    <div style="border:1px solid rgba(0,0,0,0.15); border-radius:12px; padding:12px;">
+      <h3 style="margin:0 0 10px;">Tus ingredientes</h3>
+      <p style="margin:0 0 10px; opacity:0.8;">
+        Coloca aquí los ingredientes que crees correctos.
+      </p>
+
+      <div id="selectedZone"
+           style="min-height:140px; display:flex; flex-wrap:wrap; gap:8px;"
+           aria-label="Zona de selección">
+        <!-- JS inyecta aquí chips seleccionados -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Acciones -->
+  <section style="margin:12px; max-width:1100px; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+    <button id="checkBtn" type="button" disabled>Comprobar</button>
+    <button id="nextBtn" type="button" disabled>Siguiente</button>
+    <button id="showAnswerBtn" type="button" disabled>Ver solución</button>
+
+    <label style="margin-left:auto; display:flex; gap:8px; align-items:center; opacity:0.9;">
+      <input id="showDhToggle" type="checkbox" checked>
+      Mostrar (dh) en la práctica
+    </label>
+  </section>
+
+  <!-- Feedback -->
+  <section style="margin:12px; max-width:1100px;">
+    <div id="feedbackBox"
+         style="border:1px solid rgba(0,0,0,0.15); border-radius:12px; padding:12px; min-height:64px;">
+      <div id="feedbackText" style="opacity:0.9;">
+        Cuando empieces, aquí verás los resultados: correctos, faltantes e incorrectos.
+      </div>
+
+      <div id="feedbackDetails" style="margin-top:10px; display:none;">
+        <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px;">
+          <div>
+            <strong>Correctos</strong>
+            <ul id="correctList"></ul>
+          </div>
+          <div>
+            <strong>Faltantes</strong>
+            <ul id="missingList"></ul>
+          </div>
+          <div>
+            <strong>Incorrectos</strong>
+            <ul id="wrongList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nota -->
+  <footer style="margin:20px 12px; opacity:0.7;">
+    <small>
+      Sugerencia: primero usa “Aprender” con banco mezclado. Cuando tengas racha estable, cambia a “Examen”.
+    </small>
+  </footer>
+
+  <!-- Este archivo JS lo creamos en el siguiente paso -->
+  <script src="script.js"></script>
+  <!-- Recomendación: en el siguiente paso separaremos a practice.js para no mezclar con recetas.
+       Si prefieres, lo dejamos todo en script.js y lo detectamos por URL. -->
+</body>
+</html>
