@@ -118,7 +118,13 @@ h1 {
     transform: translateY(-4px);
   }
 }
-.home-header { text-align: center; margin: 24px 12px; }
+
+/* --- Home (index) --- */
+.home-header {
+  text-align: center;
+  margin: 24px 12px;
+}
+
 .home-actions {
   display: grid;
   gap: 16px;
@@ -127,15 +133,100 @@ h1 {
   padding: 12px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
+
 .home-card {
   display: block;
   padding: 18px;
   border-radius: 12px;
   text-decoration: none;
   border: 1px solid rgba(0,0,0,0.15);
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease;
 }
-.home-card h2 { margin: 0 0 8px 0; }
-.home-card p { margin: 0; opacity: 0.85; }
-.home-card:hover { transform: translateY(-1px); }
-.home-footer { text-align: center; margin: 28px 12px; opacity: 0.7; }
 
+.home-card h2 {
+  margin: 0 0 8px 0;
+  color: #b33a1c;
+}
+
+.home-card p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+.home-card:hover {
+  transform: translateY(-1px);
+}
+
+.home-footer {
+  text-align: center;
+  margin: 28px 12px;
+  opacity: 0.7;
+}
+
+/* --- Practicar (UI) --- */
+.panel {
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.chip-zone {
+  min-height: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-content: flex-start;
+}
+
+.chip {
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 999px;
+  padding: 10px 12px;
+  background: #fff8f3;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  transition: transform 0.08s ease;
+}
+
+.chip:active {
+  transform: scale(0.98);
+}
+
+input[type="search"],
+input[type="text"] {
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  color: #2a2a2a;
+  outline: none;
+}
+
+button {
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 820px) {
+  body {
+    padding: 1.25rem;
+    gap: 1.25rem;
+  }
+}
