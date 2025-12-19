@@ -118,3 +118,24 @@ h1 {
     transform: translateY(-4px);
   }
 }
+.home-header { text-align: center; margin: 24px 12px; }
+.home-actions {
+  display: grid;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.home-card {
+  display: block;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.15);
+}
+.home-card h2 { margin: 0 0 8px 0; }
+.home-card p { margin: 0; opacity: 0.85; }
+.home-card:hover { transform: translateY(-1px); }
+.home-footer { text-align: center; margin: 28px 12px; opacity: 0.7; }
+
